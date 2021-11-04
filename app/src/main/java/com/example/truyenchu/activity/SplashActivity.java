@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.truyenchu.R;
+import com.example.truyenchu.object.PushKitActivity;
 
 public class SplashActivity extends AppCompatActivity {
     Button btnSplash;

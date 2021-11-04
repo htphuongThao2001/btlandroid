@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.truyenchu.R;
+import com.example.truyenchu.object.PushKitActivity;
 import com.huawei.hmf.tasks.Task;
 import com.huawei.hms.common.ApiException;
 import com.huawei.hms.support.account.AccountAuthManager;
@@ -35,7 +36,7 @@ public class DangNhapActivity extends AppCompatActivity {
             if (authAccountTask.isSuccessful()) {
                 AuthAccount authAccount = authAccountTask.getResult();
                 Log.i("Admin", "idToken:" + authAccount.getIdToken());
-                Intent intent = new Intent(DangNhapActivity.this,MainActivity.class);
+                Intent intent = new Intent(DangNhapActivity.this, PushKitActivity.class);
                 startActivity(intent);
 
             } else {
