@@ -18,7 +18,6 @@ import com.huawei.hms.support.account.result.AuthAccount;
 import com.huawei.hms.support.account.service.AccountAuthService;
 
 public class DangNhapActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
