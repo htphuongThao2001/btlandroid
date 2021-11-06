@@ -93,7 +93,7 @@ public class TruyenCoTichActivity extends AppCompatActivity {
         TruyenArrayList=new ArrayList<>();
         arrayList=new ArrayList<>();
         databasedoctruyen =new databasedoctruyen(this);
-        Cursor cursor=databasedoctruyen.getData2();
+        Cursor cursor=databasedoctruyen.getData3();
         while (cursor.moveToNext()){
             int id=cursor.getInt(0);
             String tentruyen=cursor.getString(1);

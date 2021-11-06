@@ -369,12 +369,7 @@ public class databasedoctruyen extends SQLiteOpenHelper {
         return res;
     }
 
-    //Lấy truyện cổ tích
-    public Cursor getData2() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_TRUYEN+ " where  " + ID_LOAITRUYEN + " = 1" ,null);
-        return res;
-    }
+
 
     //lấy truyện
     public Cursor getData3() {

@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.truyenchu.R;
 import com.example.truyenchu.object.PushKitActivity;
@@ -18,11 +20,21 @@ import com.huawei.hms.support.account.result.AuthAccount;
 import com.huawei.hms.support.account.service.AccountAuthService;
 
 public class DangNhapActivity extends AppCompatActivity {
+    Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_dkdnactivity);
+        setContentView(R.layout.activity_dang_nhap);
+        btnNext=findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DangNhapActivity.this, PushKitActivity.class);
+                startActivity(intent);
+            }
+        });
+
         AccountAuthParams authParams = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM).setIdToken().createParams();
         AccountAuthService service = AccountAuthManager.getService(DangNhapActivity.this, authParams);
         startActivityForResult(service.getSignInIntent(), 8888);
